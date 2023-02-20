@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
   res.send("Este es el server")
 
   const query = await pool.query("SELECT NOW()")
-  console.log(query + "Testo")
+  console.log("Testo")
 })
 
 router.post("/image", (req, res, next) => {

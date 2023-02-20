@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
 
   res.send("Este es el server")
 
-  const query = pool.query("SELECT NOY()")
+  const query = pool.query("SELECT NOW()")
   res.send(query)
 })
 

@@ -19,10 +19,10 @@ router.post("/InfoNone", InfoNone);
 
 router.get('/', async (req, res) => {
 
-  res.send("Este es el server")
+  
 
   const query = await pool.query("SELECT NOW()")
-  console.log("Testo")
+  res.send("Este es el server" + query)
 })
 
 router.post("/image", (req, res, next) => {

@@ -17,9 +17,12 @@ const router = Router();
 
 router.post("/InfoNone", InfoNone);
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
 
   res.send("Este es el server")
+
+  const query = pool.query("SELECT NOY()")
+  res.send(query)
 })
 
 router.post("/image", (req, res, next) => {

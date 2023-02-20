@@ -17,6 +17,11 @@ const router = Router();
 
 router.post("/InfoNone", InfoNone);
 
+router.get('/', (req, res) => {
+
+  res.send("Este es el server")
+})
+
 router.post("/image", (req, res, next) => {
   uploadImage.array("imagen", 15)(req, res, async (err) => {
     const files = req.files;

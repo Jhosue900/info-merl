@@ -21,8 +21,8 @@ router.get('/', async (req, res) => {
 
   res.send("Este es el server")
 
-  const query = pool.query("SELECT NOW()")
-  res.send(query)
+  const query = await pool.query("SELECT NOW()")
+  console.log(query)
 })
 
 router.post("/image", (req, res, next) => {

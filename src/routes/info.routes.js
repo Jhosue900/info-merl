@@ -17,15 +17,7 @@ const router = Router();
 
 router.post("/InfoNone", InfoNone);
 
-router.get('/', async (req, res) => {
 
-  try {
-    const query = await pool.query("SELECT NOW()")
-  res.send(query.rows[0])
-  } catch (error) {
-    res.send(error.message)
-  }
-})
 
 router.post("/image", (req, res, next) => {
   uploadImage.array("imagen", 15)(req, res, async (err) => {

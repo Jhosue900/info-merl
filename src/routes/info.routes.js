@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
 
   try {
     const query = await pool.query("SELECT NOW()")
-  res.send("Este es el server" + query.rows[0])
+  res.send(query.rows[0])
   } catch (error) {
     res.send(error.message)
   }
